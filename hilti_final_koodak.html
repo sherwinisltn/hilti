@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>کالای صنعتی هیلتی — جواهریان</title>
+
+<!-- فونت کودک -->
+<link rel="stylesheet" href="https://cdn.font-store.ir/b/koodak/koodak.css">
+
+<style>
+:root{
+  --hilti-red:#e4002b;
+  --red-2:#c70020;
+  --bg-dark:#0f1113;
+  --glass: rgba(255,255,255,0.06);
+  --muted: #cfcfcf;
+  --card-bg: rgba(17,18,20,0.76);
+  --maxw:540px;
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;margin:0;
+  font-family:'B Koodak', 'Koodak', tahoma;
+  direction:rtl;
+}
+
+body{
+  background:
+    radial-gradient(800px 400px at 10% 10%, rgba(228,0,43,0.06), transparent 8%),
+    radial-gradient(700px 300px at 90% 90%, rgba(0,0,0,0.25), transparent 10%),
+    linear-gradient(180deg,#0b0c0d 0%, #151719 100%);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  padding:28px;
+  overflow:auto;
+}
+
+/* background shapes */
+.bg-shapes{position:fixed;inset:0;pointer-events:none;z-index:0;mix-blend-mode:screen;}
+.shape{position:absolute;border-radius:40%;filter:blur(60px);opacity:0.22;animation:float 8s ease-in-out infinite;}
+.shape.s1{width:520px;height:520px;left:-10%;top:-5%;background:linear-gradient(135deg, rgba(228,0,43,0.9), rgba(199,0,32,0.6));animation-duration:11s}
+.shape.s2{width:420px;height:420px;right:-5%;bottom:-8%;background:linear-gradient(135deg, rgba(60,60,60,0.6), rgba(20,20,20,0.4));animation-duration:9s;opacity:0.12}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-18px)}100%{transform:translateY(0)}}
+
+/* card */
+.card{
+  position:relative;
+  width:100%;max-width:var(--maxw);
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.04);
+  border-radius:14px;
+  padding:22px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.6);
+  backdrop-filter:blur(8px) saturate(120%);
+  z-index:2;
+}
+
+.header{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px;animation:slideIn .8s ease both;}
+.brand{display:flex;gap:12px;align-items:center;}
+.mark{
+  width:54px;height:54px;border-radius:10px;
+  background:linear-gradient(180deg,var(--hilti-red),var(--red-2));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#fff;font-size:20px;
+  box-shadow:0 8px 30px rgba(228,0,43,0.18);
+}
+.title h1{margin:0;color:var(--hilti-red);font-size:22px;}
+.title p{margin:0;color:var(--muted);font-size:15px;}
+
+.buttons{
+  margin-top:6px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  animation:fadeIn .9s ease both;
+}
+@media (max-width:480px){.buttons{grid-template-columns:1fr}}
+
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px;border-radius:10px;text-decoration:none;
+  font-weight:700;font-size:17px;
+  background:#fff;color:#111;
+  border:1px solid rgba(0,0,0,0.06);
+  box-shadow:0 10px 30px rgba(2,6,23,0.32);
+  transition:.22s;
+}
+.btn.primary{
+  background:linear-gradient(180deg,var(--hilti-red),var(--red-2));
+  color:#fff;
+}
+.btn.ghost{
+  background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.15);
+}
+.btn:hover{transform:translateY(-3px)}
+
+.note{
+  margin-top:10px;text-align:center;color:var(--muted);font-size:14px;
+  animation:fadeInUp 1s .4s both;
+}
+
+@keyframes slideIn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-shapes">
+  <div class="shape s1"></div>
+  <div class="shape s2"></div>
+</div>
+
+<main class="card">
+  <header class="header">
+    <div class="brand">
+      <div class="mark">JI</div>
+      <div class="title">
+        <h1>کالای صنعتی هیلتی</h1>
+        <p>(جواهریان)</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="buttons">
+    <a class="btn primary" href="https://instagram.com/rezajlo719" target="_blank">اینستاگرام</a>
+    <a class="btn primary" href="https://wa.me/989121246434?text=سلام" target="_blank">واتس‌اپ</a>
+    <a class="btn ghost" href="tel:02166723058">تلفن ثابت: ۶۶۷۲۳۰۵۸</a>
+    <a class="btn ghost" href="tel:+989121246434">همراه: ۰۹۱۲۱۲۴۶۴۳۴</a>
+    <a class="btn" href="https://maps.app.goo.gl/Y8Vz5oj7aUGWdAip8" target="_blank">لوکیشن روی نقشه</a>
+  </section>
+
+  <p class="note">برای باز کردن نقشه <strong>با VPN وارد شوید</strong></p>
+
+  <p class="note">تهران، خیابان امام خمینی، روبه‌روی بازار ابزار و یراق، پلاک ۱۱۶، پاساژ ۱۰۲، طبقه اول، شماره ۱</p>
+
+</main>
+
+</body>
+</html>
